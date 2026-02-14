@@ -138,18 +138,37 @@
   ══════════════════════════════════════════════════════════════════════
 ```
 
+## Visualizations
+
+### Multi-Discipline Coverage — Joshua Jones vs. Typical Data Analyst
+
+![Radar Chart](radar_chart.png)
+
+### Skill Rarity Index
+
+![Skill Rarity Chart](skill_rarity_chart.png)
+
+### Market Salary Ranges vs. Joshua's $60K Ask
+
+![Salary Gap Chart](salary_gap_chart.png)
+
 ## Repository Contents
 
 | File | Description |
 |------|-------------|
 | `nashville_market_analysis.py` | Python script — data, analysis logic, and report generation |
+| `generate_visualizations.py` | Generates the PNG charts below using matplotlib |
 | `Nashville_Market_Analysis_Executive_Summary.txt` | Plain-text executive summary |
 | `nashville_analysis_data.json` | Structured JSON output (candidate, stats, rarity scores, value proposition) |
+| `radar_chart.png` | Multi-discipline coverage: Joshua vs. typical data analyst |
+| `skill_rarity_chart.png` | Color-graded skill rarity bar chart |
+| `salary_gap_chart.png` | Market salary ranges with $60K ask line |
 
 ## Usage
 
 ```bash
 python3 nashville_market_analysis.py
+python3 generate_visualizations.py
 ```
 
-Generates both the executive summary (`.txt`) and structured data (`.json`) in the project root.
+The first command generates the executive summary (`.txt`) and structured data (`.json`). The second regenerates the PNG visualizations.
