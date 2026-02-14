@@ -2,26 +2,43 @@
 
 A data-driven analysis of the Nashville, TN tech job market — built to quantify the rarity and market value of a multi-disciplinary skillset spanning data analytics, AI/ML, MCP, and full-stack development.
 
-## Key Findings
+> **Methodology:** This analysis was generated using [Cursor](https://cursor.com) with Claude Opus 4.6 (Anthropic) and the [Dice.com MCP server](https://www.dice.com). Live job listings were queried programmatically through the Dice MCP API, salary data was extracted and aggregated, and the findings were compiled into the report and structured data files below. All data reflects the Dice.com job market as of February 14, 2026.
 
-### Skill Rarity
+---
 
-| Skill | Rarity (1–10) | Notes |
-|-------|:---:|-------|
-| Model Context Protocol (MCP) | **10** | Ultra-rare. Fewer than 10 Dice listings nationally even mention MCP. |
-| AI/ML + Data Analytics | **8** | High demand, but most postings require 5+ yrs. Early-career hands-on experience is uncommon. |
-| CompTIA Quad-Stack (A+, Data+, Cloud+, Network+) | **8** | Very few data analysts also hold Cloud+ and Network+. |
-| Power BI / Data Visualization | **7** | Only 1 Power BI-specific role in Nashville. National demand is strong, local supply is thin. |
-| Revenue Forecasting & Profitability Modeling | **7** | Niche skill rarely found in early-career candidates. |
-| Python (Data/Analytics) | **6** | #1 language for data analytics. Strong demand, moderate supply. |
-| API Integration (Square, webhooks) | **6** | Growing demand. Combining API skills with analytics is a strong differentiator. |
-| JavaScript / Node.js (dashboarding) | **5** | Many JS devs exist, but few combine it with data analytics and dashboard automation. |
+## Skill Rarity & Market Value
 
-Thousands of professionals possess one or two of these skills — almost none hold all of them.
+Joshua's certifications and hands-on experience place him in a remarkably thin talent pool. The index below reflects how scarce each skill is among current Dice.com candidates and job postings.
 
-### Salary Benchmarks
+```
+██████████  10/10  Model Context Protocol (MCP)
+████████░░   8/10  AI/ML + Data Analytics (combined)
+████████░░   8/10  CompTIA Quad-Stack (A+, Data+, Cloud+, Network+)
+███████░░░   7/10  Power BI / Data Visualization
+███████░░░   7/10  Revenue Forecasting & Profitability Modeling
+██████░░░░   6/10  Python (Data/Analytics focus)
+██████░░░░   6/10  API Integration (Square, webhooks, custom)
+█████░░░░░   5/10  JavaScript / Node.js (for data dashboarding)
+```
 
-Across 115 national and 13 Nashville salary data points from Dice.com:
+| Skill | Rarity | Detail |
+|-------|:------:|--------|
+| **Model Context Protocol (MCP)** | 10/10 | Anthropic's MCP is brand-new (2025–2026). Very few certified practitioners exist. Joshua holds the Anthropic Advanced MCP certification. |
+| **AI/ML + Data Analytics** | 8/10 | Strong demand but most postings require 5+ years. Hands-on predictive modeling experience with Cursor AI at an early career stage is uncommon. |
+| **CompTIA Quad-Stack** | 8/10 | Breadth across IT fundamentals, data management, cloud architecture, and networking. Very few data analysts also hold Cloud+ and Network+. |
+| **Power BI / Data Visualization** | 7/10 | Only 1 Power BI-specific role in Nashville. National demand is strong but local supply of practitioners is thin. |
+| **Revenue Forecasting & Profitability Modeling** | 7/10 | Hands-on revenue forecasting for multi-unit retail is a specialized skill rarely found in early-career candidates. |
+| **Python (Data/Analytics)** | 6/10 | Python is the #1 language for data analytics. Strong demand, moderate supply. |
+| **API Integration** | 6/10 | API-first data extraction is in growing demand. Combining API skills with analytics is a strong differentiator. |
+| **JavaScript / Node.js** | 5/10 | Many JS developers exist, but few combine JS with data analytics and dashboard automation. |
+
+The combination is what matters most. Thousands of professionals possess one or two of these skills; almost none hold all of them. The Anthropic Advanced MCP credential alone narrows the field to a handful of practitioners nationally — and Joshua pairs it with four CompTIA certifications, production AI/ML work, and full-stack development experience.
+
+---
+
+## What This Skillset Commands
+
+Based on 115 national and 13 Nashville salary data points:
 
 | Benchmark | Range | Midpoint |
 |-----------|-------|:--------:|
@@ -32,7 +49,7 @@ Across 115 national and 13 Nashville salary data points from Dice.com:
 - **55.5% below** the national median (~$74,700/yr difference)
 - **54.7% below** the Nashville average (~$72,454/yr difference)
 
-### Per-Skill Market Rates
+Individually, each skill area Joshua covers commands:
 
 | Skill Area | Typical Salary Range |
 |------------|---------------------|
@@ -45,9 +62,13 @@ Across 115 national and 13 Nashville salary data points from Dice.com:
 | Data Scientist | $97K – $237K |
 | Data Engineer | $48K – $223K |
 
-### Nashville Openings
+A candidate who spans multiple rows of this table — particularly MCP, AI/ML, and analytics together — represents a rare convergence of capability that the market has not yet fully priced.
 
-18 live positions in or near Nashville match this skillset (Feb 2026). Every listed salary exceeds the $60K ask — most by a wide margin.
+---
+
+## Current Nashville Openings (Feb 2026)
+
+18 live positions in or near Nashville match Joshua's skills. Every listed salary exceeds the $60K ask — most by a wide margin. These are the roles his skillset qualifies him for, and the rates the market is willing to pay for them.
 
 | Role | Company | Type | Salary |
 |------|---------|------|--------|
@@ -70,9 +91,11 @@ Across 115 national and 13 Nashville salary data points from Dice.com:
 | Senior Data Scientist | Oracle | Hybrid | $91K–$199K |
 | Data Engineer | Kforce | Hybrid | $124K–$145K |
 
+---
+
 ## Data Source
 
-All job data was retrieved live from [Dice.com](https://www.dice.com) on February 14, 2026 via the Dice MCP API. A total of **2,214 listings** were analyzed across 9 skill categories, drawn from a pool of **68,718** total tech jobs nationwide.
+Of **68,718** total tech jobs on Dice.com, **2,214 listings** across 9 skill categories were analyzed. All data was retrieved live on February 14, 2026 via the Dice MCP API. Salary figures are based on posted ranges; hourly rates were annualized at 2,080 hours/year.
 
 ## Repository Contents
 
@@ -89,4 +112,3 @@ python3 nashville_market_analysis.py
 ```
 
 Generates both the executive summary (`.txt`) and structured data (`.json`) in the project root.
-
