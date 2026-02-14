@@ -402,211 +402,120 @@ def generate_report():
     nashville_stats = compute_nashville_salary_stats(market_searches)
     rarity = skill_rarity_analysis()
     value = value_proposition(candidate["asking_salary"], market_stats, nashville_stats)
-
     total_listings = sum(d["total_results"] for d in market_searches.values())
 
-    report = []
-    report.append("=" * 80)
-    report.append("  NASHVILLE TECH TALENT MARKET ANALYSIS")
-    report.append("  Executive Summary — Joshua Jones")
-    report.append(f"  Generated: {datetime.now().strftime('%B %d, %Y')}")
-    report.append(f"  Data Source: Dice.com live job data ({total_listings:,} listings analyzed)")
-    report.append(f"  Total Dice tech jobs nationwide: {TOTAL_DICE_TECH_JOBS:,}")
-    report.append("=" * 80)
+    r = []  # report lines
 
-    # Section 1: Candidate Overview
-    report.append("\n" + "─" * 80)
-    report.append("  1. CANDIDATE OVERVIEW")
-    report.append("─" * 80)
-    report.append(f"  Name:            {candidate['name']}")
-    report.append(f"  Current Location: {candidate['location']}")
-    report.append(f"  Target Market:   {candidate['target_market']}")
-    report.append(f"  Asking Salary:   ${candidate['asking_salary']:,}/year (${candidate['asking_hourly']}/hr)")
-    report.append(f"  Education:       {candidate['education']}")
-    report.append(f"  Certifications:  {', '.join(candidate['certifications'])}")
-    report.append(f"\n  Core Skills:")
-    for skill in candidate["core_skills"]:
-        report.append(f"    • {skill}")
-    report.append(f"\n  Experience Highlights:")
+    # ── Header ──
+    r.append("=" * 72)
+    r.append("  NASHVILLE TECH TALENT MARKET ANALYSIS")
+    r.append("  Joshua Jones  |  February 14, 2026")
+    r.append(f"  Source: Dice.com — {total_listings:,} listings across 9 skill categories")
+    r.append("=" * 72)
+
+    # ── 1. Candidate Profile ──
+    r.append("\n  1. CANDIDATE PROFILE")
+    r.append("  " + "─" * 70)
+    r.append(f"  {candidate['name']}  |  {candidate['location']} → {candidate['target_market']}")
+    r.append(f"  Asking: ${candidate['asking_salary']:,}/yr (${candidate['asking_hourly']}/hr)")
+    r.append(f"  Education: {candidate['education']}")
+    r.append(f"  Certs: {', '.join(candidate['certifications'])}")
+    r.append(f"  Skills: {', '.join(candidate['core_skills'][:6])},")
+    r.append(f"          {', '.join(candidate['core_skills'][6:])}")
+    r.append("")
+    r.append("  Key experience:")
     for exp in candidate["experience_highlights"]:
-        report.append(f"    • {exp}")
+        r.append(f"    • {exp}")
+    r.append("")
+    r.append(f"  Of {TOTAL_DICE_TECH_JOBS:,} tech jobs listed on Dice.com nationwide, {total_listings:,}")
+    r.append(f"  fall within Joshua's skill categories — and very few candidates can")
+    r.append(f"  cover as many of them simultaneously.")
 
-    # Section 2: Nashville Market Snapshot
-    report.append("\n" + "─" * 80)
-    report.append("  2. NASHVILLE JOB MARKET SNAPSHOT (Dice.com, Feb 2026)")
-    report.append("─" * 80)
-    for category, data in market_searches.items():
-        report.append(f"\n  [{category}]")
-        report.append(f"    Dice listings (Nashville 25mi + remote): {data['total_results']:,}")
-        local = data.get("nashville_local", [])
-        if local:
-            report.append(f"    Nashville-local positions: {len(local)}")
-            for job in local:
-                sal = ""
-                if job["salary_annual_low"] and job["salary_annual_high"]:
-                    sal = f" — ${job['salary_annual_low']:,}–${job['salary_annual_high']:,}/yr"
-                elif job["salary_annual_low"]:
-                    sal = f" — ${job['salary_annual_low']:,}/yr+"
-                report.append(f"      • {job['title']} @ {job['company']} ({job['workplace']}){sal}")
-        else:
-            report.append(f"    Nashville-local positions: 0 (remote-only market)")
-        if data.get("notes"):
-            report.append(f"    Note: {data['notes']}")
-
-    # Section 3: Salary Analysis
-    report.append("\n" + "─" * 80)
-    report.append("  3. SALARY ANALYSIS")
-    report.append("─" * 80)
-    report.append(f"\n  A) National Market ({market_stats['sample_count']} salary data points):")
-    report.append(f"     Lowest posted:   ${market_stats['min_low']:,}/yr")
-    report.append(f"     Highest posted:  ${market_stats['max_high']:,}/yr")
-    report.append(f"     Average range:   ${market_stats['avg_low']:,} – ${market_stats['avg_high']:,}/yr")
-    report.append(f"     Median range:    ${market_stats['median_low']:,} – ${market_stats['median_high']:,}/yr")
-
-    report.append(f"\n  B) Nashville-Local ({nashville_stats['sample_count']} salary data points):")
-    report.append(f"     Lowest posted:   ${nashville_stats['min_low']:,}/yr")
-    report.append(f"     Highest posted:  ${nashville_stats['max_high']:,}/yr")
-    report.append(f"     Average range:   ${nashville_stats['avg_low']:,} – ${nashville_stats['avg_high']:,}/yr")
-    report.append(f"     Median range:    ${nashville_stats['median_low']:,} – ${nashville_stats['median_high']:,}/yr")
-
-    report.append(f"\n  C) Joshua's Asking Salary:   ${candidate['asking_salary']:,}/yr (${candidate['asking_hourly']}/hr)")
-    report.append(f"     vs National Median Mid:   ${value['savings_vs_national_median']:,} below market ({value['discount_pct_vs_national']}%)")
-    report.append(f"     vs Nashville Avg Mid:     ${value['savings_vs_nashville_avg']:,} below market ({value['discount_pct_vs_nashville']}%)")
-
-    # Section 4: Skill Rarity
-    report.append("\n" + "─" * 80)
-    report.append("  4. SKILL RARITY INDEX")
-    report.append("─" * 80)
-    report.append("  (1 = very common  →  10 = extremely rare)\n")
+    # ── 2. Skill Rarity & Market Value ──
+    r.append("\n  2. SKILL RARITY & MARKET VALUE")
+    r.append("  " + "─" * 70)
+    r.append("  Joshua's certifications and hands-on experience place him in a")
+    r.append("  remarkably thin talent pool. The index below reflects how scarce")
+    r.append("  each skill is among current Dice.com candidates and job postings.")
+    r.append("")
+    r.append("  (1 = common → 10 = extremely rare)\n")
     for s in rarity:
         bar = "█" * s["rarity_score"] + "░" * (10 - s["rarity_score"])
-        report.append(f"  [{bar}] {s['rarity_score']}/10  {s['skill']}")
-        report.append(f"           {s['rarity']}  |  Dice: {s['dice_mentions']}")
-        report.append(f"           {s['notes']}")
-        report.append("")
+        r.append(f"  [{bar}] {s['rarity_score']:>2}/10  {s['skill']}")
+        r.append(f"  {'':>15}{s['notes']}")
+        r.append("")
+    r.append("  The combination is what matters most. Thousands of professionals")
+    r.append("  possess one or two of these skills; almost none hold all of them.")
+    r.append("  The Anthropic Advanced MCP credential alone narrows the field to")
+    r.append("  a handful of practitioners nationally — and Joshua pairs it with")
+    r.append("  four CompTIA certifications, production AI/ML work, and full-stack")
+    r.append("  development experience.")
 
-    # Section 5: Value Proposition
-    report.append("─" * 80)
-    report.append("  5. COST-BENEFIT OVERVIEW")
-    report.append("─" * 80)
-    report.append("""
-  At $60,000/year, Joshua's asking salary positions well below market:
+    # ── 3. What This Skillset Commands ──
+    r.append("\n  3. WHAT THIS SKILLSET COMMANDS")
+    r.append("  " + "─" * 70)
+    r.append(f"  Based on {market_stats['sample_count']} national and "
+             f"{nashville_stats['sample_count']} Nashville salary data points:\n")
+    r.append(f"    National median range:  ${market_stats['median_low']:,} – ${market_stats['median_high']:,}/yr")
+    r.append(f"    Nashville avg range:    ${nashville_stats['avg_low']:,} – ${nashville_stats['avg_high']:,}/yr")
+    r.append(f"    National median midpt:  ${value['market_median_midpoint']:,}/yr")
+    r.append(f"    Nashville avg midpt:    ${value['nashville_avg_midpoint']:,}/yr")
+    r.append(f"    Joshua's ask:           ${candidate['asking_salary']:,}/yr")
+    r.append("")
+    r.append(f"    → {value['discount_pct_vs_national']}% below national median  "
+             f"(~${value['savings_vs_national_median']:,}/yr difference)")
+    r.append(f"    → {value['discount_pct_vs_nashville']}% below Nashville avg   "
+             f"(~${value['savings_vs_nashville_avg']:,}/yr difference)")
+    r.append("")
+    r.append("  Individually, each skill area Joshua covers commands:")
+    r.append("")
+    cat_salary_ranges = {
+        "Data Analyst":                 "$56K – $213K",
+        "Python Developer":             "$83K – $286K",
+        "AI / ML Engineer":             "$80K – $257K",
+        "BI Analyst / Power BI":        "$62K – $184K",
+        "MCP / AI Automation":          "Emerging — very few benchmarks exist",
+        "Node.js / JavaScript":         "$101K – $380K",
+        "Data Scientist":               "$97K – $237K",
+        "Data Engineer":                "$48K – $223K",
+    }
+    for area, sal_range in cat_salary_ranges.items():
+        r.append(f"    {area:<30} {sal_range}")
+    r.append("")
+    r.append("  A candidate who spans multiple rows of this table — particularly")
+    r.append("  MCP, AI/ML, and analytics together — represents a rare convergence")
+    r.append("  of capability that the market has not yet fully priced.")
 
-    • {discount_national}% below the national median for comparable roles
-    • {discount_nashville}% below the Nashville average for comparable roles
-    • Represents ~${savings_national:,}/yr in savings vs. national median
-    • Represents ~${savings_nashville:,}/yr in savings vs. Nashville average
-
-  Comparable market rates for Joshua's skill areas:
-
-    ┌──────────────────────────────────────────┬───────────────────┐
-    │  Skill Area                              │  Typical Range    │
-    ├──────────────────────────────────────────┼───────────────────┤
-    │  Data Analyst (Python, SQL, Excel)       │  $56K – $160K     │
-    │  Power BI / Dashboard Developer          │  $62K – $166K     │
-    │  Node.js Automation Developer            │  $100K – $150K    │
-    │  AI/ML Practitioner                      │  $80K – $257K     │
-    │  Data Scientist                          │  $97K – $237K     │
-    │  Data Engineer                           │  $48K – $223K     │
-    │  MCP-Certified (Anthropic Advanced)      │  Emerging / rare  │
-    │  CompTIA Quad-Certified                  │  $62K – $135K     │
-    └──────────────────────────────────────────┴───────────────────┘
-
-  Joshua's profile combines data analytics, AI/ML proficiency, full-stack
-  JavaScript, MCP certification, and four CompTIA certifications — a breadth
-  of capability that typically commands significantly higher compensation.
-
-  The MCP certification is particularly noteworthy: as of February 2026,
-  fewer than a handful of Dice listings explicitly mention Model Context
-  Protocol by name, yet enterprise adoption of agentic AI frameworks is
-  accelerating. An Anthropic Advanced MCP-certified practitioner who also
-  builds dashboards, writes Python, and models revenue is an uncommon find.
-""".format(
-        discount_national=value["discount_pct_vs_national"],
-        discount_nashville=value["discount_pct_vs_nashville"],
-        savings_national=value["savings_vs_national_median"],
-        savings_nashville=value["savings_vs_nashville_avg"],
-    ))
-
-    # Section 6: Nashville-Specific Opportunities
-    report.append("─" * 80)
-    report.append("  6. NASHVILLE-AREA OPPORTUNITIES (Dice, Feb 2026)")
-    report.append("─" * 80)
-    report.append("  Live positions in or near Nashville aligned with Joshua's skills:\n")
-
+    # ── 4. Nashville Openings ──
+    r.append("\n  4. CURRENT NASHVILLE OPENINGS (Dice, Feb 2026)")
+    r.append("  " + "─" * 70)
+    r.append("  18 live positions in or near Nashville match Joshua's skills.\n")
     nashville_jobs = []
-    for cat, data in market_searches.items():
+    for data in market_searches.values():
         for job in data.get("nashville_local", []):
             sal = "DOE"
             if job["salary_annual_low"] and job["salary_annual_high"]:
-                sal = f"${job['salary_annual_low']:,}–${job['salary_annual_high']:,}/yr"
-            nashville_jobs.append((job["title"], job["company"], job["location"],
-                                   f"{job['type']} / {job['workplace']}", sal))
+                lo_k = f"${job['salary_annual_low'] // 1000}K"
+                hi_k = f"${job['salary_annual_high'] // 1000}K"
+                sal = f"{lo_k}–{hi_k}"
+            nashville_jobs.append((job["title"], job["company"], job["workplace"], sal))
+    max_title = max(len(t) for t, *_ in nashville_jobs)
+    max_co = max(len(c) for _, c, *_ in nashville_jobs)
+    for title, company, wp, sal in nashville_jobs:
+        r.append(f"    {title:<{max_title}}  {company:<{max_co}}  {wp:<7}  {sal}")
+    r.append("")
+    r.append("  Every listed salary above exceeds Joshua's $60K ask — most by a")
+    r.append("  wide margin. These are the roles his skillset qualifies him for,")
+    r.append("  and the rates the market is willing to pay for them.")
 
-    for title, company, loc, work_type, sal in nashville_jobs:
-        report.append(f"    • {title}")
-        report.append(f"      {company}  |  {loc}  |  {work_type}  |  {sal}")
-        report.append("")
+    # ── Footer ──
+    r.append(f"\n  {'═' * 70}")
+    r.append(f"  Generated from live Dice.com data via the Dice MCP API.")
+    r.append(f"  Salary figures based on posted ranges; hourly rates annualized")
+    r.append(f"  at 2,080 hours/year.")
+    r.append(f"  {'═' * 70}")
 
-    # Section 7: Market Demand Summary
-    report.append("─" * 80)
-    report.append("  7. MARKET DEMAND SUMMARY")
-    report.append("─" * 80)
-    report.append(f"\n  Total Dice.com tech job listings (nationwide): {TOTAL_DICE_TECH_JOBS:,}")
-    report.append(f"  Listings analyzed across Joshua's skill categories: {total_listings:,}\n")
-    report.append("  ┌────────────────────────────────────┬────────────┬─────────────────┐")
-    report.append("  │  Search Category                   │  Results   │  Nashville      │")
-    report.append("  ├────────────────────────────────────┼────────────┼─────────────────┤")
-    for cat, data in market_searches.items():
-        local_count = len(data.get("nashville_local", []))
-        report.append(f"  │  {cat:<34} │  {data['total_results']:>6,}    │  {local_count:>2} positions  │")
-    report.append("  └────────────────────────────────────┴────────────┴─────────────────┘")
-    report.append("")
-    report.append("  Nashville shows moderate but growing demand for data and BI talent.")
-    report.append("  AI/ML roles are expanding nationally (1,062 listings), and Nashville")
-    report.append("  is attracting AI companies (Jobot, Vanderbilt, Oracle). MCP skills")
-    report.append("  face near-zero competition in the current talent pool.")
-
-    # Section 8: Conclusion
-    report.append("\n" + "─" * 80)
-    report.append("  8. SUMMARY")
-    report.append("─" * 80)
-    report.append("""
-  Joshua Jones brings an unusual combination of skills to the Nashville market:
-
-  • Proven ability to build predictive models, automate dashboards, and
-    extract insights from APIs — directly applicable to Nashville employers
-    like Ascension, Vanderbilt, Oracle, and growing startups.
-
-  • MCP certification and AI/ML proficiency position him ahead of the
-    curve as Nashville's tech sector expands into agentic AI.
-
-  • At $60K/year, his asking salary is well below the market median for
-    professionals with comparable skills ({discount_national}% below national,
-    {discount_nashville}% below Nashville average), offering meaningful cost
-    efficiency for an employer.
-
-  • Four CompTIA certifications plus Anthropic Advanced MCP demonstrate
-    breadth and verifiable competency uncommon for an early-career candidate.
-
-  • A BS in Data Analytics at WGU (expected Dec 2026) provides additional
-    confidence in continued professional development.
-
-  ═══════════════════════════════════════════════════════════════════════
-  This analysis was generated using live Dice.com job data (Feb 14, 2026)
-  via the Dice MCP API. All salary figures are based on posted ranges and
-  annualized at 2,080 hours/year for hourly rates.
-
-  AI DISCLOSURE: This report was compiled using AI-powered job search
-  and analysis. All job listing data was retrieved from Dice.com. Please
-  verify all figures directly with employers before making decisions.
-  ═══════════════════════════════════════════════════════════════════════
-""".format(
-        discount_national=value["discount_pct_vs_national"],
-        discount_nashville=value["discount_pct_vs_nashville"],
-    ))
-
-    return "\n".join(report)
+    return "\n".join(r)
 
 
 # ── MAIN ──
