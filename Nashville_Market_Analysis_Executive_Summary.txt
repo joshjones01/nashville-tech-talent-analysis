@@ -1,0 +1,308 @@
+================================================================================
+  NASHVILLE TECH TALENT MARKET ANALYSIS
+  Executive Summary — Joshua Jones
+  Generated: February 14, 2026
+  Data Source: Dice.com live job data (2,214 listings analyzed)
+  Total Dice tech jobs nationwide: 68,718
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+  1. CANDIDATE OVERVIEW
+────────────────────────────────────────────────────────────────────────────────
+  Name:            Joshua Jones
+  Current Location: Indianapolis, IN
+  Target Market:   Nashville, TN
+  Asking Salary:   $60,000/year ($28.85/hr)
+  Education:       BS Data Analytics – Western Governors University (expected Dec 2026)
+  Certifications:  CompTIA A+, CompTIA Data+, CompTIA Cloud+, CompTIA Network+, Anthropic Advanced MCP
+
+  Core Skills:
+    • Python
+    • JavaScript / Node.js
+    • AI / ML
+    • Model Context Protocol (MCP)
+    • Power BI
+    • Excel
+    • Data Visualization & Dashboarding
+    • Revenue Forecasting & Profitability Modeling
+    • Customer Behavior Analytics
+    • APIs & Webhooks (Square, proprietary)
+    • Cursor AI Tooling
+
+  Experience Highlights:
+    • Engineered predictive revenue models for 12 storefronts using AI (Cursor)
+    • Automated Node.js dashboards for Marketing team
+    • Extracted/analyzed high-volume customer & sales data via Square APIs
+    • 4 CompTIA certs + Anthropic Advanced MCP certification
+    • Multi-discipline background: data, development, creative, e-commerce
+
+────────────────────────────────────────────────────────────────────────────────
+  2. NASHVILLE JOB MARKET SNAPSHOT (Dice.com, Feb 2026)
+────────────────────────────────────────────────────────────────────────────────
+
+  [Data Analyst]
+    Dice listings (Nashville 25mi + remote): 144
+    Nashville-local positions: 2
+      • Senior Data Analyst @ Ascension Health (Hybrid) — $70,000–$100,000/yr
+      • SAP Data Analyst @ Judge Group (On-Site) — $104,000–$124,800/yr
+
+  [Python Developer]
+    Dice listings (Nashville 25mi + remote): 83
+    Nashville-local positions: 4
+      • Python Data Azure Engineer @ SIAL Technology (Hybrid)
+      • Python Analytics Developer @ SIAL Technology (Hybrid)
+      • Python Analytics Developer @ SANS (On-Site) — $166,400–$208,000/yr
+      • Team Lead Software (C#/Python) @ SIAL Technology (On-Site)
+
+  [AI / ML Engineer]
+    Dice listings (Nashville 25mi + remote): 1,062
+    Nashville-local positions: 2
+      • AI Engineer @ Jobot (AI Startup) (On-Site) — $175,000–$200,000/yr
+      • Sr AI Research Engineer @ Vanderbilt University (On-Site)
+
+  [Business Intelligence Analyst]
+    Dice listings (Nashville 25mi + remote): 213
+    Nashville-local positions: 6
+      • Senior BI Analyst @ Vaco by Highspring (Hybrid) — $135,200–$145,600/yr
+      • Sr. BI Engineer @ Vaco by Highspring (Hybrid) — $156,000–$176,800/yr
+      • BI Developer @ Nobl Q (On-Site)
+      • Sr. BI Engineer (Remote, Nashville co.) @ Vaco by Highspring (Remote) — $135,200–$166,400/yr
+      • Business Analyst II @ Apex Systems (On-Site) — $62,400–$70,720/yr
+      • Sr. Associate – Transaction Analytics @ Alvarez & Marsal (On-Site) — $130,000–$130,000/yr
+
+  [Power BI / Data Visualization]
+    Dice listings (Nashville 25mi + remote): 29
+    Nashville-local positions: 1
+      • Power BI Developer/Analyst @ OtterBase (On-Site) — $90,000–$95,000/yr
+
+  [MCP / AI Automation]
+    Dice listings (Nashville 25mi + remote): 158
+    Nashville-local positions: 0 (remote-only market)
+    Note: MCP is an emerging protocol (Anthropic). Only a handful of job listings explicitly require it, making certified MCP practitioners extremely rare.
+
+  [Node.js / JavaScript Developer]
+    Dice listings (Nashville 25mi + remote): 105
+    Nashville-local positions: 1
+      • Sr Software Engineer @ Robert Half (On-Site) — $112,320–$128,960/yr
+
+  [Data Scientist]
+    Dice listings (Nashville 25mi + remote): 128
+    Nashville-local positions: 1
+      • Senior Data Scientist @ Oracle (Hybrid) — $91,100–$199,500/yr
+
+  [Data Engineer]
+    Dice listings (Nashville 25mi + remote): 292
+    Nashville-local positions: 1
+      • Data Engineer @ Kforce (Hybrid) — $124,800–$145,600/yr
+
+────────────────────────────────────────────────────────────────────────────────
+  3. SALARY ANALYSIS
+────────────────────────────────────────────────────────────────────────────────
+
+  A) National Market (115 salary data points):
+     Lowest posted:   $40,414/yr
+     Highest posted:  $566,000/yr
+     Average range:   $117,513 – $161,240/yr
+     Median range:    $114,400 – $155,000/yr
+
+  B) Nashville-Local (13 salary data points):
+     Lowest posted:   $62,400/yr
+     Highest posted:  $208,000/yr
+     Average range:   $119,417 – $145,491/yr
+     Median range:    $124,800 – $145,600/yr
+
+  C) Joshua's Asking Salary:   $60,000/yr ($28.85/hr)
+     vs National Median Mid:   $74,700 below market (55.5%)
+     vs Nashville Avg Mid:     $72,454 below market (54.7%)
+
+────────────────────────────────────────────────────────────────────────────────
+  4. SKILL RARITY INDEX
+────────────────────────────────────────────────────────────────────────────────
+  (1 = very common  →  10 = extremely rare)
+
+  [██████████] 10/10  Model Context Protocol (MCP)
+           ULTRA-RARE  |  Dice: ~5-10 explicit listings nationally
+           Anthropic's MCP is brand-new (2025-2026). Very few certified practitioners exist. Joshua holds the Anthropic Advanced MCP certification.
+
+  [████████░░] 8/10  AI/ML + Data Analytics (combined)
+           HIGH-DEMAND / RARE at entry level  |  Dice: ~1,062 listings nationally
+           Strong demand but most postings require 5+ years. Hands-on predictive modeling experience with Cursor AI at an early career stage is uncommon.
+
+  [████████░░] 8/10  CompTIA Quad-Stack (A+, Data+, Cloud+, Network+)
+           RARE combination  |  Dice: N/A (certification, not search keyword)
+           Breadth across IT fundamentals, data management, cloud architecture, and networking. Very few data analysts also hold Cloud+ and Network+.
+
+  [███████░░░] 7/10  Power BI / Data Visualization
+           HIGH-DEMAND / LOW-SUPPLY in Nashville  |  Dice: ~29 listings (Nashville + remote)
+           Only 1 Power BI-specific role in Nashville. National demand is strong but local supply of practitioners is thin.
+
+  [███████░░░] 7/10  Revenue Forecasting & Profitability Modeling
+           NICHE  |  Dice: 0 exact Nashville matches
+           Hands-on revenue forecasting for multi-unit retail is a specialized skill rarely found in early-career candidates.
+
+  [██████░░░░] 6/10  Python (Data/Analytics focus)
+           IN-DEMAND  |  Dice: ~83 listings (Nashville + remote)
+           Python is the #1 language for data analytics. Strong demand, moderate supply.
+
+  [██████░░░░] 6/10  API Integration (Square, webhooks, custom)
+           MODERATE-HIGH when combined with analytics  |  Dice: Embedded in many roles but rarely standalone
+           API-first data extraction is in growing demand. Combining API skills with analytics is a strong differentiator.
+
+  [█████░░░░░] 5/10  JavaScript / Node.js (for data dashboarding)
+           MODERATE  |  Dice: ~105 listings (Nashville + remote)
+           Many JS developers exist, but few combine JS with data analytics and dashboard automation.
+
+────────────────────────────────────────────────────────────────────────────────
+  5. COST-BENEFIT OVERVIEW
+────────────────────────────────────────────────────────────────────────────────
+
+  At $60,000/year, Joshua's asking salary positions well below market:
+
+    • 55.5% below the national median for comparable roles
+    • 54.7% below the Nashville average for comparable roles
+    • Represents ~$74,700/yr in savings vs. national median
+    • Represents ~$72,454/yr in savings vs. Nashville average
+
+  Comparable market rates for Joshua's skill areas:
+
+    ┌──────────────────────────────────────────┬───────────────────┐
+    │  Skill Area                              │  Typical Range    │
+    ├──────────────────────────────────────────┼───────────────────┤
+    │  Data Analyst (Python, SQL, Excel)       │  $56K – $160K     │
+    │  Power BI / Dashboard Developer          │  $62K – $166K     │
+    │  Node.js Automation Developer            │  $100K – $150K    │
+    │  AI/ML Practitioner                      │  $80K – $257K     │
+    │  Data Scientist                          │  $97K – $237K     │
+    │  Data Engineer                           │  $48K – $223K     │
+    │  MCP-Certified (Anthropic Advanced)      │  Emerging / rare  │
+    │  CompTIA Quad-Certified                  │  $62K – $135K     │
+    └──────────────────────────────────────────┴───────────────────┘
+
+  Joshua's profile combines data analytics, AI/ML proficiency, full-stack
+  JavaScript, MCP certification, and four CompTIA certifications — a breadth
+  of capability that typically commands significantly higher compensation.
+
+  The MCP certification is particularly noteworthy: as of February 2026,
+  fewer than a handful of Dice listings explicitly mention Model Context
+  Protocol by name, yet enterprise adoption of agentic AI frameworks is
+  accelerating. An Anthropic Advanced MCP-certified practitioner who also
+  builds dashboards, writes Python, and models revenue is an uncommon find.
+
+────────────────────────────────────────────────────────────────────────────────
+  6. NASHVILLE-AREA OPPORTUNITIES (Dice, Feb 2026)
+────────────────────────────────────────────────────────────────────────────────
+  Live positions in or near Nashville aligned with Joshua's skills:
+
+    • Senior Data Analyst
+      Ascension Health  |  Nashville, TN  |  Full-time / Hybrid  |  $70,000–$100,000/yr
+
+    • SAP Data Analyst
+      Judge Group  |  Brentwood, TN  |  Contract / On-Site  |  $104,000–$124,800/yr
+
+    • Python Data Azure Engineer
+      SIAL Technology  |  Nashville, TN  |  Contract / Hybrid  |  DOE
+
+    • Python Analytics Developer
+      SIAL Technology  |  Nashville, TN  |  Contract / Hybrid  |  DOE
+
+    • Python Analytics Developer
+      SANS  |  Nashville, TN  |  Contract / On-Site  |  $166,400–$208,000/yr
+
+    • Team Lead Software (C#/Python)
+      SIAL Technology  |  Nashville, TN  |  Full-time / On-Site  |  DOE
+
+    • AI Engineer
+      Jobot (AI Startup)  |  Nashville, TN  |  Full-time / On-Site  |  $175,000–$200,000/yr
+
+    • Sr AI Research Engineer
+      Vanderbilt University  |  Nashville, TN  |  Full-time / On-Site  |  DOE
+
+    • Senior BI Analyst
+      Vaco by Highspring  |  Nashville, TN (Green Hills)  |  Contract-to-Hire / Hybrid  |  $135,200–$145,600/yr
+
+    • Sr. BI Engineer
+      Vaco by Highspring  |  Brentwood, TN  |  Contract-to-Hire / Hybrid  |  $156,000–$176,800/yr
+
+    • BI Developer
+      Nobl Q  |  Nashville, TN  |  Contract / On-Site  |  DOE
+
+    • Sr. BI Engineer (Remote, Nashville co.)
+      Vaco by Highspring  |  Remote  |  Contract-to-Hire / Remote  |  $135,200–$166,400/yr
+
+    • Business Analyst II
+      Apex Systems  |  Nashville, TN  |  Contract / On-Site  |  $62,400–$70,720/yr
+
+    • Sr. Associate – Transaction Analytics
+      Alvarez & Marsal  |  Nashville, TN  |  Full-time / On-Site  |  $130,000–$130,000/yr
+
+    • Power BI Developer/Analyst
+      OtterBase  |  Nashville, TN  |  Full-time / On-Site  |  $90,000–$95,000/yr
+
+    • Sr Software Engineer
+      Robert Half  |  Nashville, TN  |  Contract / On-Site  |  $112,320–$128,960/yr
+
+    • Senior Data Scientist
+      Oracle  |  Nashville, TN  |  Full-time / Hybrid  |  $91,100–$199,500/yr
+
+    • Data Engineer
+      Kforce  |  Nashville, TN  |  Contract / Hybrid  |  $124,800–$145,600/yr
+
+────────────────────────────────────────────────────────────────────────────────
+  7. MARKET DEMAND SUMMARY
+────────────────────────────────────────────────────────────────────────────────
+
+  Total Dice.com tech job listings (nationwide): 68,718
+  Listings analyzed across Joshua's skill categories: 2,214
+
+  ┌────────────────────────────────────┬────────────┬─────────────────┐
+  │  Search Category                   │  Results   │  Nashville      │
+  ├────────────────────────────────────┼────────────┼─────────────────┤
+  │  Data Analyst                       │     144    │   2 positions  │
+  │  Python Developer                   │      83    │   4 positions  │
+  │  AI / ML Engineer                   │   1,062    │   2 positions  │
+  │  Business Intelligence Analyst      │     213    │   6 positions  │
+  │  Power BI / Data Visualization      │      29    │   1 positions  │
+  │  MCP / AI Automation                │     158    │   0 positions  │
+  │  Node.js / JavaScript Developer     │     105    │   1 positions  │
+  │  Data Scientist                     │     128    │   1 positions  │
+  │  Data Engineer                      │     292    │   1 positions  │
+  └────────────────────────────────────┴────────────┴─────────────────┘
+
+  Nashville shows moderate but growing demand for data and BI talent.
+  AI/ML roles are expanding nationally (1,062 listings), and Nashville
+  is attracting AI companies (Jobot, Vanderbilt, Oracle). MCP skills
+  face near-zero competition in the current talent pool.
+
+────────────────────────────────────────────────────────────────────────────────
+  8. SUMMARY
+────────────────────────────────────────────────────────────────────────────────
+
+  Joshua Jones brings an unusual combination of skills to the Nashville market:
+
+  • Proven ability to build predictive models, automate dashboards, and
+    extract insights from APIs — directly applicable to Nashville employers
+    like Ascension, Vanderbilt, Oracle, and growing startups.
+
+  • MCP certification and AI/ML proficiency position him ahead of the
+    curve as Nashville's tech sector expands into agentic AI.
+
+  • At $60K/year, his asking salary is well below the market median for
+    professionals with comparable skills (55.5% below national,
+    54.7% below Nashville average), offering meaningful cost
+    efficiency for an employer.
+
+  • Four CompTIA certifications plus Anthropic Advanced MCP demonstrate
+    breadth and verifiable competency uncommon for an early-career candidate.
+
+  • A BS in Data Analytics at WGU (expected Dec 2026) provides additional
+    confidence in continued professional development.
+
+  ═══════════════════════════════════════════════════════════════════════
+  This analysis was generated using live Dice.com job data (Feb 14, 2026)
+  via the Dice MCP API. All salary figures are based on posted ranges and
+  annualized at 2,080 hours/year for hourly rates.
+
+  AI DISCLOSURE: This report was compiled using AI-powered job search
+  and analysis. All job listing data was retrieved from Dice.com. Please
+  verify all figures directly with employers before making decisions.
+  ═══════════════════════════════════════════════════════════════════════

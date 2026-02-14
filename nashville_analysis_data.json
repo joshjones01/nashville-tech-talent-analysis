@@ -1,0 +1,125 @@
+{
+  "candidate": {
+    "name": "Joshua Jones",
+    "location": "Indianapolis, IN",
+    "target_market": "Nashville, TN",
+    "asking_salary": 60000,
+    "asking_hourly": 28.85,
+    "education": "BS Data Analytics \u2013 Western Governors University (expected Dec 2026)",
+    "certifications": [
+      "CompTIA A+",
+      "CompTIA Data+",
+      "CompTIA Cloud+",
+      "CompTIA Network+",
+      "Anthropic Advanced MCP"
+    ],
+    "core_skills": [
+      "Python",
+      "JavaScript / Node.js",
+      "AI / ML",
+      "Model Context Protocol (MCP)",
+      "Power BI",
+      "Excel",
+      "Data Visualization & Dashboarding",
+      "Revenue Forecasting & Profitability Modeling",
+      "Customer Behavior Analytics",
+      "APIs & Webhooks (Square, proprietary)",
+      "Cursor AI Tooling"
+    ],
+    "experience_highlights": [
+      "Engineered predictive revenue models for 12 storefronts using AI (Cursor)",
+      "Automated Node.js dashboards for Marketing team",
+      "Extracted/analyzed high-volume customer & sales data via Square APIs",
+      "4 CompTIA certs + Anthropic Advanced MCP certification",
+      "Multi-discipline background: data, development, creative, e-commerce"
+    ]
+  },
+  "market_stats": {
+    "min_low": 40414,
+    "max_high": 566000,
+    "avg_low": 117513,
+    "avg_high": 161240,
+    "median_low": 114400,
+    "median_high": 155000,
+    "sample_count": 115
+  },
+  "nashville_stats": {
+    "min_low": 62400,
+    "max_high": 208000,
+    "avg_low": 119417,
+    "avg_high": 145491,
+    "median_low": 124800,
+    "median_high": 145600,
+    "sample_count": 13
+  },
+  "skill_rarity": [
+    {
+      "skill": "Model Context Protocol (MCP)",
+      "dice_mentions": "~5-10 explicit listings nationally",
+      "rarity": "ULTRA-RARE",
+      "rarity_score": 10,
+      "notes": "Anthropic's MCP is brand-new (2025-2026). Very few certified practitioners exist. Joshua holds the Anthropic Advanced MCP certification."
+    },
+    {
+      "skill": "AI/ML + Data Analytics (combined)",
+      "dice_mentions": "~1,062 listings nationally",
+      "rarity": "HIGH-DEMAND / RARE at entry level",
+      "rarity_score": 8,
+      "notes": "Strong demand but most postings require 5+ years. Hands-on predictive modeling experience with Cursor AI at an early career stage is uncommon."
+    },
+    {
+      "skill": "CompTIA Quad-Stack (A+, Data+, Cloud+, Network+)",
+      "dice_mentions": "N/A (certification, not search keyword)",
+      "rarity": "RARE combination",
+      "rarity_score": 8,
+      "notes": "Breadth across IT fundamentals, data management, cloud architecture, and networking. Very few data analysts also hold Cloud+ and Network+."
+    },
+    {
+      "skill": "Power BI / Data Visualization",
+      "dice_mentions": "~29 listings (Nashville + remote)",
+      "rarity": "HIGH-DEMAND / LOW-SUPPLY in Nashville",
+      "rarity_score": 7,
+      "notes": "Only 1 Power BI-specific role in Nashville. National demand is strong but local supply of practitioners is thin."
+    },
+    {
+      "skill": "Revenue Forecasting & Profitability Modeling",
+      "dice_mentions": "0 exact Nashville matches",
+      "rarity": "NICHE",
+      "rarity_score": 7,
+      "notes": "Hands-on revenue forecasting for multi-unit retail is a specialized skill rarely found in early-career candidates."
+    },
+    {
+      "skill": "Python (Data/Analytics focus)",
+      "dice_mentions": "~83 listings (Nashville + remote)",
+      "rarity": "IN-DEMAND",
+      "rarity_score": 6,
+      "notes": "Python is the #1 language for data analytics. Strong demand, moderate supply."
+    },
+    {
+      "skill": "API Integration (Square, webhooks, custom)",
+      "dice_mentions": "Embedded in many roles but rarely standalone",
+      "rarity": "MODERATE-HIGH when combined with analytics",
+      "rarity_score": 6,
+      "notes": "API-first data extraction is in growing demand. Combining API skills with analytics is a strong differentiator."
+    },
+    {
+      "skill": "JavaScript / Node.js (for data dashboarding)",
+      "dice_mentions": "~105 listings (Nashville + remote)",
+      "rarity": "MODERATE",
+      "rarity_score": 5,
+      "notes": "Many JS developers exist, but few combine JS with data analytics and dashboard automation."
+    }
+  ],
+  "value_proposition": {
+    "asking_salary": 60000,
+    "market_median_midpoint": 134700,
+    "nashville_avg_midpoint": 132454,
+    "savings_vs_national_median": 74700,
+    "savings_vs_nashville_avg": 72454,
+    "discount_pct_vs_national": 55.5,
+    "discount_pct_vs_nashville": 54.7
+  },
+  "total_listings_analyzed": 2214,
+  "total_dice_tech_jobs": 68718,
+  "generated_at": "2026-02-14T14:12:06.750549"
+}
